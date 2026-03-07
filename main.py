@@ -66,18 +66,36 @@ def get_ai_news():
     ]
 
     news = set()
+    detected_tools = set()
+
     for feed in feeds:
         d = feedparser.parse(feed)
         for entry in d.entries:
             news.add(entry.title)
+            detected_tools.update(find_ai_tools(entry.title))
+
+    save_detected_tools(detected_tools)
 
     return list(news)[:10]
 
-# Guardar resumen diario en resumen_diario.md
-def save_summary(file_path, summary):
-    with open(file_path, 'w', encoding='utf-8') as file:
-        file.write(summary)
-        
+# Detectar herramientas AI en un encabezado de noticia
+def find_ai_tools(title):
+    ai_tools = [
+        "Llama", "GPT", "Claude", "HuggingFace", "Cursor", "Devin"
+    ]
+    detected_tools = set()
+    for tool in ai_tools:
+        if tool.lower() in title.lower():
+            detected_tools.add(tool)
+    return detected_tools
+
+# Guardar herramientas AI detectadas en herramientas_ai.md
+def save_detected_tools(detected_tools):
+    with open("herramientas_ai.md", "w", encoding='utf-8') as file:
+        file.write("Herramientas IA detectadas:\n")
+        for tool in detected_tools:
+            file.write(f"- {tool}\n")
+
 # Configuración
 config = {
     "tareas_file": "tareas.md",
