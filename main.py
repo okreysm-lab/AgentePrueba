@@ -96,6 +96,11 @@ def save_detected_tools(detected_tools):
         for tool in detected_tools:
             file.write(f"- {tool}\n")
 
+# Guardar resumen diario en resumen_diario.md
+def save_summary(file_path, summary):
+    with open(file_path, "w", encoding='utf-8') as file:
+        file.write(summary)
+
 # Configuración
 config = {
     "tareas_file": "tareas.md",
