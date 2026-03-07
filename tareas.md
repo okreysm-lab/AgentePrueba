@@ -1,0 +1,4 @@
+- Tarea urgente: Revisar reporte financiero
+- Tarea pendiente: Programar reunión con el equipo
+- Tarea seguimiento: Actualizar estado de proyecto
+- Tarea informativo: Recibir actualizaciones de la gestión de proyectos
