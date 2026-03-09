@@ -1,0 +1,317 @@
+{
+  "proyectos_innovacion": {
+    "Propuesta CMPC": {
+      "estado_actual": "En revisión",
+      "linea_tiempo_2026": [
+        "Revisión de cambios",
+        "Aprobación de la propuesta"
+      ],
+      "pendientes_estrategicos": [
+        "Revisión de cambios",
+        "Aprobación de la propuesta"
+      ]
+    },
+    "OT830 - Codificación Cencosud": {
+      "estado_actual": "En progreso",
+      "linea_tiempo_2026": [
+        "Reunión de coordinación",
+        "Desarrollo de codificación"
+      ],
+      "pendientes_estrategicos": [
+        "Reunión de coordinación",
+        "Desarrollo de codificación"
+      ]
+    },
+    "Inocuidad alimentaria en planta congelados LANDES": {
+      "estado_actual": "En desarrollo",
+      "linea_tiempo_2026": [
+        "Desarrollo instruccional",
+        "Grabación de locuciones",
+        "Desarrollo de contenido",
+        "Creación de módulos",
+        "Inicio de desarrollo instruccional y gráfico",
+        "Revisión de PDF con feedback",
+        "Evaluación de la propuesta de diseño instruccional y gráfico"
+      ],
+      "pendientes_estrategicos": [
+        "Desarrollo instruccional",
+        "Grabación de locuciones",
+        "Desarrollo de contenido",
+        "Creación de módulos",
+        "Inicio de desarrollo instruccional y gráfico",
+        "Revisión de PDF con feedback",
+        "Evaluación de la propuesta de diseño instruccional y gráfico"
+      ]
+    },
+    "Agrosuper - Solicitud traspaso de evaluaciones a XML": {
+      "estado_actual": "Pendiente",
+      "linea_tiempo_2026": [
+        "Traspaso de evaluaciones",
+        "Verificación de formato XML"
+      ],
+      "pendientes_estrategicos": [
+        "Traspaso de evaluaciones",
+        "Verificación de formato XML"
+      ]
+    },
+    "Inducción corporativa Landes (Curso 1: Gestión ambiental)": {
+      "estado_actual": "En revisión",
+      "linea_tiempo_2026": [
+        "Revisión de contenido",
+        "Aprobación del cliente"
+      ],
+      "pendientes_estrategicos": [
+        "Revisión de contenido",
+        "Aprobación del cliente"
+      ]
+    },
+    "IACC- Solicitud ajuste interfaz y banners + propuesta gráfica": {
+      "estado_actual": "En progreso",
+      "linea_tiempo_2026": [
+        "Ajuste de interfaz",
+        "Diseño de banners"
+      ],
+      "pendientes_estrategicos": [
+        "Ajuste de interfaz",
+        "Diseño de banners"
+      ]
+    },
+    "OT 719 Cencosud Scotiabank - Nivel intermedio": {
+      "estado_actual": "En revisión",
+      "linea_tiempo_2026": [
+        "Revisión de recursos finales",
+        "Aprobación de la plataforma"
+      ],
+      "pendientes_estrategicos": [
+        "Revisión de recursos finales",
+        "Aprobación de la plataforma"
+      ]
+    },
+    "Cencosud Scotiabank": {
+      "estado_actual": "En desarrollo",
+      "linea_tiempo_2026": [
+        "Reemplazo de recursos finales en plataforma",
+        "Revisión de Scorms programada para el 16 de marzo de 2026",
+        "Revisión Scorms Cencosud Scotiabank"
+      ],
+      "pendientes_estrategicos": [
+        "Reemplazo de recursos finales en plataforma",
+        "Revisión de Scorms programada para el 16 de marzo de 2026",
+        "Revisión Scorms Cencosud Scotiabank"
+      ]
+    },
+    "Agrosuper": {
+      "estado_actual": "En desarrollo",
+      "linea_tiempo_2026": [
+        "Inicio de desarrollo multimedia M2C y M2D",
+        "Inicio de desarrollo multimedia M3",
+        "Confirmar validación final de cápsulas (M2C y M2D) y resúmenes",
+        "Confirmar término de revisión cápsula M3 por CCII",
+        "Solicitar a Seba que envíe documentación pendiente: CV + copia de CI por ambos lados",
+        "Desarrollo de contenido multimedia",
+        "Creación de módulos"
+      ],
+      "pendientes_estrategicos": [
+        "Inicio de desarrollo multimedia M2C y M2D",
+        "Inicio de desarrollo multimedia M3",
+        "Confirmar validación final de cápsulas (M2C y M2D) y resúmenes",
+        "Confirmar término de revisión cápsula M3 por CCII",
+        "Solicitar a Seba que envíe documentación pendiente: CV + copia de CI por ambos lados",
+        "Desarrollo de contenido multimedia",
+        "Creación de módulos"
+      ]
+    },
+    "IACC - Activación diseño instruccional": {
+      "estado_actual": "En desarrollo",
+      "linea_tiempo_2026": [
+        "Diseño instruccional para el curso de Sistema de Gestión de Seguridad de la Información (SGSI)"
+      ],
+      "pendientes_estrategicos": [
+        "Diseño instruccional para el curso de Sistema de Gestión de Seguridad de la Información (SGSI)"
+      ]
+    },
+    "Programa 'Fundamentos de Producción de Agua Potable' (Essbio)": {
+      "estado_actual": "En desarrollo",
+      "linea_tiempo_2026": [
+        "Entrega de multimedia Módulo 3 y archivo Excel Módulo 4"
+      ],
+      "pendientes_estrategicos": [
+        "Entrega de multimedia Módulo 3 y archivo Excel Módulo 4"
+      ]
+    },
+    "IACC - Sistema de Aseguramiento Interno de la Calidad (SAIC)": {
+      "estado_actual": "En desarrollo",
+      "linea_tiempo_2026": [
+        "Validación descriptor del curso",
+        "Definición de narrativa",
+        "Revisión interfaz + banners"
+      ],
+      "pendientes_estrategicos": [
+        "Validación descriptor del curso",
+        "Definición de narrativa",
+        "Revisión interfaz + banners"
+      ]
+    },
+    "IACC - Sistema de Gestión de Seguridad de la Información (SGSI)": {
+      "estado_actual": "En desarrollo",
+      "linea_tiempo_2026": [
+        "Activación diseño instruccional"
+      ],
+      "pendientes_estrategicos": [
+        "Activación diseño instruccional"
+      ]
+    },
+    "Ecometales": {
+      "estado_actual": "En desarrollo",
+      "linea_tiempo_2026": [
+        "Desarrollo de interfaz y personajes",
+        "Creación de módulos"
+      ],
+      "pendientes_estrategicos": [
+        "Desarrollo de interfaz y personajes",
+        "Creación de módulos"
+      ]
+    },
+    "IACC - Seguridad de la información": {
+      "estado_actual": "En revisión",
+      "linea_tiempo_2026": [
+        "Diseño instruccional",
+        "Creación de banners"
+      ],
+      "pendientes_estrategicos": [
+        "Diseño instruccional",
+        "Creación de banners"
+      ]
+    },
+    "IACC - Aseguramiento de la calidad": {
+      "estado_actual": "En espera de insumos",
+      "linea_tiempo_2026": [
+        "Definición de narrativa",
+        "Revisión de interfaz y banners"
+      ],
+      "pendientes_estrategicos": [
+        "Definición de narrativa",
+        "Revisión de interfaz y banners"
+      ]
+    },
+    "Cencosud": {
+      "estado_actual": "En revisión",
+      "linea_tiempo_2026": [
+        "Codificación de curso",
+        "Actualización gráfica"
+      ],
+      "pendientes_estrategicos": [
+        "Codificación de curso",
+        "Actualización gráfica"
+      ]
+    },
+    "Gestión ambiental LANDES": {
+      "estado_actual": "En desarrollo",
+      "linea_tiempo_2026": [
+        "Desarrollo de contenido",
+        "Creación de módulos"
+      ],
+      "pendientes_estrategicos": [
+        "Desarrollo de contenido",
+        "Creación de módulos"
+      ]
+    },
+    "Scotiabank": {
+      "estado_actual": "En definición",
+      "linea_tiempo_2026": [
+        "Definición de descriptor del curso",
+        "Creación de módulos"
+      ],
+      "pendientes_estrategicos": [
+        "Definición de descriptor del curso",
+        "Creación de módulos"
+      ]
+    },
+    "Fundamentos de Producción de Agua Potable (Essbio)": {
+      "estado_actual": "En revisión",
+      "linea_tiempo_2026": [
+        "Entrega de multimedia Módulo 3 y archivo Excel Módulo 4",
+        "Carga del curso en plataforma"
+      ],
+      "pendientes_estrategicos": [
+        "Entrega de multimedia Módulo 3 y archivo Excel Módulo 4",
+        "Carga del curso en plataforma"
+      ]
+    },
+    "Agrosuper - Desarrollo multimedia M1 y M2": {
+      "estado_actual": "En desarrollo",
+      "linea_tiempo_2026": [
+        "Inicio de desarrollo multimedia M1",
+        "Ok final del cliente para M2A y M2B",
+        "Disponibilidad de SCORM en carpeta compartida"
+      ],
+      "pendientes_estrategicos": [
+        "Inicio de desarrollo multimedia M1",
+        "Ok final del cliente para M2A y M2B",
+        "Disponibilidad de SCORM en carpeta compartida"
+      ]
+    },
+    "IACC - Activación diseño instruccional/ Curso: Sistema de Gestión de Seguridad de la Información (SGSI)": {
+      "estado_actual": "En revisión",
+      "linea_tiempo_2026": [
+        "Revisión de material de apoyo",
+        "Incorporación de rúbrica",
+        "Entrega de la propuesta de diseño instruccional"
+      ],
+      "pendientes_estrategicos": [
+        "Revisión de material de apoyo",
+        "Incorporación de rúbrica",
+        "Entrega de la propuesta de diseño instruccional"
+      ]
+    },
+    "Ecometales - Interfaz y personaje/ Inicio proyecto IACC 2 cursos": {
+      "estado_actual": "En desarrollo",
+      "linea_tiempo_2026": [
+        "Solicitud de interfaz y personaje",
+        "Carga de banners para revisión"
+      ],
+      "pendientes_estrategicos": [
+        "Solicitud de interfaz y personaje",
+        "Carga de banners para revisión"
+      ]
+    },
+    "Fiordo Austral": {
+      "estado_actual": "En desarrollo",
+      "linea_tiempo_2026": [
+        "Propuesta de guión para el M3 cargada en SharePoint"
+      ],
+      "pendientes_estrategicos": [
+        "Propuesta de guión para el M3 cargada en SharePoint"
+      ]
+    },
+    "Guion borrador Actividad Formativa": {
+      "estado_actual": "En revisión",
+      "linea_tiempo_2026": [
+        "Revisión del guion borrador"
+      ],
+      "pendientes_estrategicos": [
+        "Revisión del guion borrador"
+      ]
+    }
+  },
+  "contexto_equipo": {
+    "Yerko Verdugo Gutiérrez": "Líder de Innovación",
+    "Mayerlin Roxana Labrador Quintana": "Desarrolladora",
+    "Lorena Isla González": "Jefa Aseguramiento Técnico Normativo",
+    "Karina Saldivia Salazar": "Diseñadora Gráfica",
+    "Catalina Urra": "Diseñadora Externa empresa proveedora Argumental",
+    "Paula Olave Cáceres": "Encargada de proyectos",
+    "Elisabet Cayuleo Vega": "Encargada de Proyectos",
+    "Javier Martínez Salinas": "Encargado de proyectos",
+    "Natalia Carrillo": "Coordinadora de proyectos",
+    "Daniela Liendo": "Proveedora de servicios de Argumental",
+    "Andrés Navarro Miralles": "Gestor de Clientes",
+    "Fran": "Colaborador externo",
+    "Seba": "Colaborador externo",
+    "Maite": "Cliente IACC",
+    "Jorge Arce Olivares": "Encargado de proyecto SQM",
+    "Javiera Molina Arriagada": "Coordinadora de proyectos",
+    "Karen Nuñez Maldonado": "Gestor de cliente"
+  },
+  "ultima_actualizacion": "2026-03-08"
+}

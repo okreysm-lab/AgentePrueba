@@ -1,121 +1,255 @@
+import requests
 import json
-import re
 import feedparser
+import yt_dlp
+from googletrans import Translator
 from datetime import datetime
 
-# Cargar tareas desde tareas.md
+
+# ==============================
+# TELEGRAM
+# ==============================
+
+
+def enviar_telegram(mensaje):
+
+    token = "8778043651:AAHtmw2cjFyqaIf4GeG6PEK0xBOu38zPUFQ"
+    chat_id = "8727442796"
+
+    url = f"https://api.telegram.org/bot{token}/sendMessage"
+
+    data = {
+        "chat_id": chat_id,
+        "text": mensaje[:4000]
+    }
+
+    requests.post(url, data=data)
+
+
+# ==============================
+# TRADUCTOR
+# ==============================
+
+def traducir(texto):
+
+    translator = Translator()
+
+    try:
+        return translator.translate(texto, dest="es").text
+    except:
+        return texto
+
+
+# ==============================
+# CARGAR TAREAS
+# ==============================
+
 def load_tasks(file_path):
-    with open(file_path, 'r') as file:
-        tasks = file.readlines()
-    return tasks
 
-# Cargar memoria desde memoria.json
-def load_memory(file_path):
-    with open(file_path, 'r') as file:
-        memory = json.load(file)
-    return memory
+    with open(file_path, "r", encoding="utf-8") as file:
+        return file.readlines()
 
-# Clasificar tareas
+
+# ==============================
+# CLASIFICAR TAREAS
+# ==============================
+
 def classify_tasks(tasks):
+
     urgente = []
     pendiente = []
     seguimiento = []
     informativo = []
 
     for task in tasks:
-        task = task.strip()
-        if "urgente" in task.lower():
+
+        t = task.strip().lower()
+
+        if "urgente" in t:
             urgente.append(task)
-        elif "pendiente" in task.lower():
+
+        elif "pendiente" in t:
             pendiente.append(task)
-        elif "seguimiento" in task.lower():
+
+        elif "seguimiento" in t:
             seguimiento.append(task)
-        elif "informativo" in task.lower():
+
+        elif "informativo" in t:
             informativo.append(task)
+
         else:
             pendiente.append(task)
 
     return urgente, pendiente, seguimiento, informativo
 
-# Generar resumen diario
-def generate_daily_summary(urgente, pendiente, seguimiento, informativo):
-    summary = "Resumen Diario:\n\n"
-    summary += "Urgente:\n"
-    for task in urgente:
-        summary += f"- {task}\n"
-    summary += "\nPendiente:\n"
-    for task in pendiente:
-        summary += f"- {task}\n"
-    summary += "\nSeguimiento:\n"
-    for task in seguimiento:
-        summary += f"- {task}\n"
-    summary += "\nInformativo:\n"
-    for task in informativo:
-        summary += f"- {task}\n"
 
-    return summary
+# ==============================
+# GENERAR AGENDA
+# ==============================
 
-# Obtener noticias de IA desde RSS feeds
+def generar_agenda(urgente, pendiente, seguimiento, informativo):
+
+    texto = "📊 AGENDA\n\n"
+
+    texto += "🚨 Urgente\n"
+    for t in urgente:
+        texto += f"• {t}"
+
+    texto += "\n📌 Pendiente\n"
+    for t in pendiente:
+        texto += f"• {t}"
+
+    texto += "\n🔎 Seguimiento\n"
+    for t in seguimiento:
+        texto += f"• {t}"
+
+    texto += "\nℹ️ Informativo\n"
+    for t in informativo:
+        texto += f"• {t}"
+
+    return texto
+
+
+# ==============================
+# NOTICIAS IA
+# ==============================
+
 def get_ai_news():
+
     feeds = [
-        "https://techcrunch.com/tag/artificial-intelligence/feed/",
-        "https://venturebeat.com/category/ai/feed/",
-        "https://rss.arxiv.org/rss/cs.AI",
-        "https://news.ycombinator.com/rss",
-        "https://huggingface.co/blog/feed.xml"
+
+        "https://openai.com/blog/rss.xml",
+        "https://deepmind.google/blog/rss.xml",
+        "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
+        "https://the-decoder.com/feed/",
+        "https://venturebeat.com/category/ai/feed/"
+
     ]
 
-    news = set()
-    detected_tools = set()
+    noticias = []
 
     for feed in feeds:
+
         d = feedparser.parse(feed)
-        for entry in d.entries:
-            news.add(entry.title)
-            detected_tools.update(find_ai_tools(entry.title))
 
-    save_detected_tools(detected_tools)
+        for entry in d.entries[:2]:
 
-    return list(news)[:10]
+            titulo = traducir(entry.title)
+            link = entry.link
 
-# Detectar herramientas AI en un encabezado de noticia
-def find_ai_tools(title):
-    ai_tools = [
-        "Llama", "GPT", "Claude", "HuggingFace", "Cursor", "Devin"
+            noticias.append(f"{titulo}\n{link}")
+
+    return noticias[:8]
+
+
+# ==============================
+# VIDEOS IA
+# ==============================
+
+def get_youtube_ai_videos():
+
+    channels = [
+
+        "https://www.youtube.com/@TwoMinutePapers/videos",
+        "https://www.youtube.com/@AIExplained/videos",
+        "https://www.youtube.com/@YannicKilcher/videos",
+        "https://www.youtube.com/@Fireship/videos"
+
     ]
-    detected_tools = set()
-    for tool in ai_tools:
-        if tool.lower() in title.lower():
-            detected_tools.add(tool)
-    return detected_tools
 
-# Guardar herramientas AI detectadas en herramientas_ai.md
-def save_detected_tools(detected_tools):
-    with open("herramientas_ai.md", "w", encoding='utf-8') as file:
-        file.write("Herramientas IA detectadas:\n")
-        for tool in detected_tools:
-            file.write(f"- {tool}\n")
+    ydl_opts = {
 
-# Guardar resumen diario en resumen_diario.md
+        "quiet": True,
+        "extract_flat": True
+
+    }
+
+    videos = []
+
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+
+        for channel in channels:
+
+            info = ydl.extract_info(channel, download=False)
+
+            for video in info["entries"][:2]:
+
+                titulo = traducir(video["title"])
+                link = f"https://youtube.com/watch?v={video['id']}"
+
+                videos.append(f"{titulo}\n{link}")
+
+    return videos
+
+
+# ==============================
+# GUARDAR RESUMEN
+# ==============================
+
 def save_summary(file_path, summary):
-    with open(file_path, "w", encoding='utf-8') as file:
+
+    with open(file_path, "w", encoding="utf-8") as file:
+
         file.write(summary)
 
-# Configuración
+
+# ==============================
+# CONFIG
+# ==============================
+
 config = {
+
     "tareas_file": "tareas.md",
-    "memoria_file": "memoria.json",
     "resumen_file": "resumen_diario.md"
+
 }
 
-# Ejecución
+
+# ==============================
+# MAIN
+# ==============================
+
 if __name__ == "__main__":
+
     tasks = load_tasks(config["tareas_file"])
-    memory = load_memory(config["memoria_file"])
+
     urgente, pendiente, seguimiento, informativo = classify_tasks(tasks)
-    summary = generate_daily_summary(urgente, pendiente, seguimiento, informativo)
-    ai_news = get_ai_news()
-    summary += "\n\nNoticias IA:\n"
-    for news in ai_news:
-        summary += f"- {news}\n"
-    save_summary(config["resumen_file"], summary)
+
+    agenda = generar_agenda(urgente, pendiente, seguimiento, informativo)
+
+    noticias = get_ai_news()
+
+    videos = get_youtube_ai_videos()
+
+    hoy = datetime.now().strftime("%d %B %Y")
+
+    mensaje = f"""
+👋 Hola amo Yerko, Trinity por acá.
+
+📅 {hoy}
+
+━━━━━━━━━━━━━━━━
+
+{agenda}
+
+━━━━━━━━━━━━━━━━
+
+🧠 RADAR IA
+
+"""
+
+    for n in noticias:
+
+        mensaje += f"\n{n}\n"
+
+    mensaje += "\n━━━━━━━━━━━━━━━━\n\n🎥 VIDEOS IA\n"
+
+    for v in videos:
+
+        mensaje += f"\n{v}\n"
+
+    save_summary(config["resumen_file"], mensaje)
+
+    enviar_telegram(mensaje)
+
+    print("Resumen enviado a Telegram")

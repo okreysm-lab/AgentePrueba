@@ -1,0 +1,7 @@
+https://techcrunch.com/tag/artificial-intelligence/feed/
+https://venturebeat.com/category/ai/feed/
+https://rss.arxiv.org/rss/cs.AI
+https://huggingface.co/blog/feed.xml
+https://news.ycombinator.com/rss
+https://www.marktechpost.com/feed/
+https://www.artificialintelligence-news.com/feed/

@@ -1,0 +1,15 @@
+.aider*
+__pycache__/
+*.pyc
+
+# Credenciales y archivos de configuración con tokens
+credentials.json
+token.json
+token_agenda.json
+config.json
+.env
+
+# Archivos de memoria o datos temporales que no quieres ensuciar
+memoria.json
+hitos_anuales_crudos.json
+planner_actual.json
