@@ -98,7 +98,7 @@ Escribe SÓLO la respuesta final que se enviará a Telegram.
     try:
         respuesta = client.chat.completions.create(
             messages=[{"role": "user", "content": prompt}],
-            model="llama-3.3-70b-versatile",
+            model="llama3-8b-8192",
             temperature=0.3
         )
         mensaje_final = respuesta.choices[0].message.content

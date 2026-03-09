@@ -89,7 +89,7 @@ Debe devolver: {"intencion": "RUTINA_AGENDA", "razonamiento": "Palabra clave age
                 {"role": "system", "content": prompt_sistema},
                 {"role": "user", "content": f"Mensaje de Yerko: '{texto_usuario}'"}
             ],
-            model="llama-3.3-70b-versatile",
+            model="llama3-8b-8192",
             temperature=0.0
         )
         # Extraer el JSON 
